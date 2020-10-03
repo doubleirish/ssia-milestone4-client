@@ -1,0 +1,26 @@
+#server:
+#  port: 6060
+#  servlet:
+#    session:
+#      cookie:
+#        name: UISESSION
+#spring:
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          custom-client:
+#            client-id: client2
+#            client-secret: secret
+#            client-name: Auth Server
+#            scope: advice
+#            provider: custom-provider
+#            redirect-uri: http://localhost:7070/advice/
+##            client-authentication-method: basic
+#            authorization-grant-type: client-credential
+#        provider:
+#          custom-provider:
+#            token-uri: http://localhost:9191/oauth/token
+#            authorization-uri: http://localhost:9191/oauth/authorize
+##            user-info-uri: http://localhost:8081/auth/user/me
+##            user-name-attribute: name
