@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "32ab39cc-06e3-4772-a5ce-2b6f6dd6d82d",
+		"name": "ssia_milestone4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CLIENT POST /genadvice",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b54a71f4-6058-4557-a986-214fdac587cb",
+						"exec": [
+							"",
+							"pm.test(\"Expecting Status code of 200, was \"+ pm.response.code, function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ff856fec-6e0f-40db-81d3-6e2a798f2830",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[     \n  {\n      \"username\": \"john\",\n    \"metrics\": [\n      {\n        \"type\": \"BLOOD_OXYGEN_LEVEL\",\n        \"value\": 96\n      },\n      {\n        \"type\": \"BP_SYSTOLIC\",\n        \"value\": 120\n      },\n      {\n        \"type\": \"BP_DIASTOLIC\",\n        \"value\": 80\n      }\n    ]\n\n  },\n    {\n      \"username\": \"admin\",\n    \"metrics\": [\n      {\n        \"type\": \"BLOOD_OXYGEN_LEVEL\",\n        \"value\": 93\n      },\n      {\n        \"type\": \"BP_SYSTOLIC\",\n        \"value\": 130\n      },\n      {\n        \"type\": \"BP_DIASTOLIC\",\n        \"value\": 75\n      }\n    ]\n\n  }\n]"
+				},
+				"url": {
+					"raw": "localhost:6060/genadvice",
+					"host": [
+						"localhost"
+					],
+					"port": "6060",
+					"path": [
+						"genadvice"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

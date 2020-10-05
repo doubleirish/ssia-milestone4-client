@@ -21,34 +21,15 @@
   </properties>
 
   <dependencies>
-<!--    <dependency>-->
-<!--      <groupId>org.springframework.boot</groupId>-->
-<!--      <artifactId>spring-boot-starter-oauth2-client</artifactId>-->
-<!--    </dependency>-->
-
-
-
-<!--    <dependency>-->
-<!--      <groupId>org.springframework.boot</groupId>-->
-<!--      <artifactId>spring-boot-starter-security</artifactId>-->
-<!--    </dependency>-->
-
 
     <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>jquery</artifactId>
-      <version>3.4.1</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>bootstrap</artifactId>
-      <version>4.3.1</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>webjars-locator-core</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-oauth2-client</artifactId>
     </dependency>
 
     <dependency>
@@ -101,11 +82,7 @@
       </exclusions>
     </dependency>
 
-<!--    <dependency>-->
-<!--      <groupId>org.springframework.security</groupId>-->
-<!--      <artifactId>spring-security-test</artifactId>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
+
   </dependencies>
 
   <build>
